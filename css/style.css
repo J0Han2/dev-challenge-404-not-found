@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+  --Black: hsl(0, 0%, 20%);
+  --V-DK-Gray: hsl(0, 0%, 31%);
+  --White: hsl(0, 0%, 100%);
+  --Text-Spacing: -0.035em;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+body {
+  font-family: monospace;
+  padding: 0 2.5rem 10rem;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.header {
+  margin: 2rem 0 7rem;
+}
+
+.title {
+  color: var(--Black);
+  font-family: 'Inconsolata', monospace;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wrapper-banner {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.content {
+  margin-top: 6rem;
+}
+
+.content__title {
+  color: var(--Black);
+  font-size: clamp(4.8rem, 7vw, 6.4rem);
+  line-height: clamp(7.2rem, 8vh, 9.5rem);
+  letter-spacing: var(--Text-Spacing);
+}
+
+.text {
+  color: var(--V-DK-Gray);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: clamp(2.7rem, 6vh, 3.6rem);
+  margin: 3rem 0 6rem;
+  letter-spacing: var(--Text-Spacing);
+  width: min(32.5rem, 100%);
+}
+
+.button {
+  background-color: var(--Black);
+  color: var(--White);
+  display: block;
+  font-size: 1.4rem;
+  height: 6.8rem;
+  line-height: 6.8rem;
+  letter-spacing: var(--Text-Spacing);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 21.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 3vw;
+  }
+
+  .not-found {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .wrapper-banner {
+    max-width: 40%;
+    margin: 0;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 0 6vw;
+  }
+
+  .not-found {
+    gap: 10rem;
+  }
+
+  .content__title {
+    width: min(40vw, 100%);
+  }
+
+}
